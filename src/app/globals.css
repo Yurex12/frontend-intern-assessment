@@ -1,26 +1,37 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
+  /* Brand Colors */
+  --primary: #571244;
+  --secondary: #ef4353;
+
+  /* Standard UI Colors */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #171717; /* This acts as your "Black" */
+
+  /* If the design uses specific grays, add them here */
+  --muted: #f4f4f5;
 }
 
 @theme inline {
+  /* Mapping brand colors */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  /* Overriding default background/foreground */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Fonts - assuming you're using next/font setup */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles to ensure variables are applied globally */
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, sans-serif;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
