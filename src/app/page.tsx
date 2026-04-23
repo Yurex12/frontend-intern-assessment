@@ -1,3 +1,4 @@
+import { CapacityDevelopment } from '@/components/CapacityDevelopment';
 import { CorporateTrainings } from '@/components/CorporateTrainings';
 import { Hero } from '@/components/Hero';
 import { LMS } from '@/components/LMS';
@@ -10,6 +11,7 @@ export default function Home() {
       <LMS />
       <CorporateTrainings />
       <PersonalIndividualTraining />
+      <CapacityDevelopment />
     </main>
   );
 }
