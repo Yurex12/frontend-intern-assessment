@@ -23,8 +23,8 @@ export function LMS() {
           Learning Management System
         </h2>
         {/* image */}
-        <div>
-          <div className='relative h-82 w-82 md:w-139 md:h-142 mx-auto'>
+        <div className='flex items-center justify-center'>
+          <div className='relative h-82 w-82 md:w-139 md:h-142'>
             <Image
               src={lmsImage}
               alt='Learning Management System'
