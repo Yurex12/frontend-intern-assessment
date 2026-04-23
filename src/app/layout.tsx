@@ -30,7 +30,7 @@ export default function RootLayout({
     >
       <body className='text-sm md:text-base'>
         <Header />
-        <main>{children}</main>
+        <>{children}</>
       </body>
     </html>
   );

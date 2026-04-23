@@ -7,16 +7,17 @@
 
   /* Standard UI Colors */
   --background: #ffffff;
-  --foreground: #171717; /* This acts as your "Black" */
+  --foreground: #151515; /* This acts as your "Black" */
 
   /* If the design uses specific grays, add them here */
-  --muted: #f4f4f5;
+  --primary-muted: #5712441a;
 }
 
 @theme inline {
   /* Mapping brand colors */
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-primary-muted: var(--primary-muted);
 
   /* Overriding default background/foreground */
   --color-background: var(--background);
