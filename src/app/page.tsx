@@ -1,6 +1,7 @@
 import { CorporateTrainings } from '@/components/CorporateTrainings';
 import { Hero } from '@/components/Hero';
 import { LMS } from '@/components/LMS';
+import { PersonalIndividualTraining } from '@/components/PersonalIndividualTraining';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <LMS />
       <CorporateTrainings />
+      <PersonalIndividualTraining />
     </main>
   );
 }
