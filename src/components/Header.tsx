@@ -1,13 +1,21 @@
+'use client';
+
 import Image from 'next/image';
 import logo from '../images/logo.svg';
 import { ChevronIcon } from './icons/ChevronIcon';
 import { UserIcon } from './icons/UserIcon';
 import { Navbar } from './Navbar';
+import { useState } from 'react';
+import { MobileNavbar } from './MobileNavbar';
+import { HamburgerMenu } from './icons/HamburgerMenu';
 
 export function Header() {
+  const [open, setOpen] = useState(false);
+
+  const toggleOpen = () => setOpen((open) => !open);
   return (
-    <header className='fixed top-0 z-50 mx-auto flex w-full items-center justify-between bg-background'>
-      <div className='pt-4 flex-1 backdrop-blur'>
+    <header className='fixed top-0 z-50 mx-auto flex w-full bg-background items-center justify-between shadow'>
+      <div className='pt-4 flex-1'>
         {/* Top */}
         <div className='flex justify-between items-center w-full max-w-360 mx-auto px-4'>
           <Image src={logo} alt='Logo' />
@@ -26,13 +34,26 @@ export function Header() {
             </button>
           </div>
 
-          {/* HarmbuggerMenu */}
-          <button className='lg:hidden'>Open</button>
+          {/* HamburgerMenu */}
+          <div className='lg:hidden'>
+            <button onClick={toggleOpen}>
+              <HamburgerMenu />
+            </button>
+          </div>
         </div>
 
         <div className='border-b border-foreground/10'></div>
 
         <Navbar />
+
+        <MobileNavbar onToggleOpen={toggleOpen} open={open} />
+
+        {open && (
+          <div
+            className='fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity'
+            onClick={toggleOpen}
+          />
+        )}
       </div>
     </header>
   );

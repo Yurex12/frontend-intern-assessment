@@ -34,4 +34,7 @@
     color: var(--foreground);
     font-family: var(--font-sans), Arial, sans-serif;
   }
+  button {
+    cursor: pointer;
+  }
 }

@@ -5,7 +5,7 @@ import hero from '../images/hero.jpg';
 
 export function Hero() {
   return (
-    <section className='relative w-full h-screen flex items-center justify-center overflow-hidden'>
+    <section className='relative w-full h-96 mt-20 lg:mt-32 lg:h-[511px] flex items-center justify-center overflow-hidden'>
       <Image
         src={hero}
         alt='Hero background'
