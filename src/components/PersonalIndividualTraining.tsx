@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import { ListComponent } from './ListComponent';
 import personalIndividualTraining from '../images/personalIndividualTraining.jpg';
 
 const trainings = [
@@ -46,11 +46,7 @@ export function PersonalIndividualTraining() {
           </p>
 
           <div>
-            <ul className='flex flex-col gap-2 list-disc list-inside px-2'>
-              {trainings.map((course) => (
-                <li key={course}>{course}</li>
-              ))}
-            </ul>
+            <ListComponent items={trainings} />
           </div>
         </div>
       </div>

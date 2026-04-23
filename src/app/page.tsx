@@ -2,6 +2,7 @@ import { CapacityDevelopment } from '@/components/CapacityDevelopment';
 import { CorporateTrainings } from '@/components/CorporateTrainings';
 import { Hero } from '@/components/Hero';
 import { LMS } from '@/components/LMS';
+import { ManagementDevelopmentProgram } from '@/components/ManagementDevelopmentProgram';
 import { PersonalIndividualTraining } from '@/components/PersonalIndividualTraining';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <CorporateTrainings />
       <PersonalIndividualTraining />
       <CapacityDevelopment />
+      <ManagementDevelopmentProgram />
     </main>
   );
 }

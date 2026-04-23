@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import { ListComponent } from './ListComponent';
 import capacityDevelopment from '../images/capacityDevelopment.jpg';
 
 const developments = [
@@ -47,11 +47,7 @@ export function CapacityDevelopment() {
           </p>
 
           <div>
-            <ul className='flex flex-col gap-2 list-disc list-inside px-2'>
-              {developments.map((course) => (
-                <li key={course}>{course}</li>
-              ))}
-            </ul>
+            <ListComponent items={developments} />
           </div>
         </div>
       </div>
