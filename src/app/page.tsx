@@ -7,6 +7,8 @@ import { PersonalIndividualTraining } from '@/components/PersonalIndividualTrain
 import { LearningWithOurCeo } from '@/components/LearningWithOurCeo';
 import { BookConsultant } from '@/components/BookConsultant';
 import { TrainingTheConsultant } from '@/components/TrainingTheConsultant';
+import { Footer } from '@/components/Footer';
+import { GetInTouch } from '@/components/GetInTouch';
 
 export default function Home() {
   return (
@@ -20,6 +22,10 @@ export default function Home() {
       <LearningWithOurCeo />
       <TrainingTheConsultant />
       <BookConsultant />
+      <div>
+        <GetInTouch />
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -1,13 +1,12 @@
 'use client';
 
-import Image from 'next/image';
-import logo from '../images/logo.svg';
 import { ChevronIcon } from './icons/ChevronIcon';
 import { UserIcon } from './icons/UserIcon';
 import { Navbar } from './Navbar';
 import { useState } from 'react';
 import { MobileNavbar } from './MobileNavbar';
 import { HamburgerMenu } from './icons/HamburgerMenu';
+import { Logo } from './Logo';
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -18,7 +17,7 @@ export function Header() {
       <div className='pt-4 flex-1'>
         {/* Top */}
         <div className='flex justify-between items-center w-full max-w-360 mx-auto px-4'>
-          <Image src={logo} alt='Logo' />
+          <Logo />
 
           <div className='items-center gap-4 hidden lg:flex'>
             <button className='flex items-center gap-2 bg-primary text-background py-1.25 px-4 rounded-sm text-sm'>
