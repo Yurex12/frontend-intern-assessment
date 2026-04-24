@@ -1,16 +1,16 @@
-import { navLinks } from '@/constants';
 import Link from 'next/link';
+
+import { LinkButton } from './LinkButton';
+
 import { ChevronIcon } from './icons/ChevronIcon';
 import { CloseIcon } from './icons/CloseIcon';
 import { UserIcon } from './icons/UserIcon';
 
-export function MobileNavbar({
-  onToggleOpen,
-  open,
-}: {
-  open: boolean;
-  onToggleOpen: VoidFunction;
-}) {
+import { navLinks } from '@/constants';
+
+import { MobileNavbarProps } from '@/types';
+
+export function MobileNavbar({ onToggleOpen, open }: MobileNavbarProps) {
   return (
     <div
       className={`fixed top-0 h-dvh z-50 w-64 bg-background shadow flex flex-col transition-all duration-300 ${
@@ -42,16 +42,15 @@ export function MobileNavbar({
       </ul>
 
       <div className='mt-auto px-4 py-4 flex flex-col gap-3 border-t border-foreground/10'>
-        <button className='flex items-center gap-2 bg-primary text-background py-2 px-3 rounded-sm text-sm w-full justify-center'>
+        <LinkButton className='flex items-center gap-2  w-full justify-center'>
           <span className='py-1 px-2 rounded-full flex items-center justify-center overflow-hidden bg-background'>
             <UserIcon />
           </span>
           <span>Account</span>
-        </button>
+          <ChevronIcon />
+        </LinkButton>
 
-        <button className='bg-secondary text-background py-2 px-3 rounded-sm text-sm w-full'>
-          Take Assessment
-        </button>
+        <LinkButton className='bg-secondary w-full'>Take Assessment</LinkButton>
       </div>
     </div>
   );

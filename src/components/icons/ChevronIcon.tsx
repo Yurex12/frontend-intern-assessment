@@ -1,8 +1,6 @@
-interface IconProps {
-  className?: string;
-}
+import { IconProps } from '@/types';
 
-export const ChevronIcon = ({ className }: IconProps) => {
+export function ChevronIcon({ className }: IconProps) {
   return (
     <svg
       width='10'
@@ -21,4 +19,4 @@ export const ChevronIcon = ({ className }: IconProps) => {
       />
     </svg>
   );
-};
+}

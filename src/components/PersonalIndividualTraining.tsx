@@ -1,28 +1,22 @@
 import Image from 'next/image';
-import { ListComponent } from './ListComponent';
-import personalIndividualTraining from '../images/personalIndividualTraining.jpg';
 
-const trainings = [
-  'Leadership Development',
-  'Soft Skill Development',
-  'Industry Specific Knowledge',
-  'Technical Skills Enhancement',
-  'Time Management and Productivity',
-  'Career Development',
-];
+import { ListComponent } from './ListComponent';
+
+import { personalIndividualTrainings } from '@/constants';
+
+import personalIndividualTraining from '../images/personalIndividualTraining.jpg';
 
 export function PersonalIndividualTraining() {
   return (
-    <section className='px-4'>
-      <div className='max-w-360 w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-y-6'>
+    <section className='px-4 md:px-8 lg:px-16'>
+      <div className='max-w-8xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-6 md:gap-16'>
         {/* Heading- mobile */}
-        <h2 className='text-[20px] md:hidden sm:text-center font-semibold'>
+        <h2 className='text-[20px] sm:text-3xl md:text-4xl lg:hidden font-semibold'>
           Personal Individual Training
         </h2>
 
-        {/* image */}
-        <div className='flex items-center justify-center md:justify-start'>
-          <div className='relative h-82 w-82 md:w-151 md:h-87'>
+        <div className='flex items-center justify-center lg:justify-start'>
+          <div className='relative h-82 w-full lg:w-151 lg:h-87'>
             <Image
               src={personalIndividualTraining}
               alt='Personal Individual Training'
@@ -32,21 +26,20 @@ export function PersonalIndividualTraining() {
           </div>
         </div>
 
-        {/* Content */}
-        <div className='p-4 rounded-sm space-y-5'>
-          <h2 className='text-[20px] hidden lg:block font-semibold'>
+        <div className='rounded-sm space-y-5'>
+          <h2 className='text-[40px] hidden lg:block font-semibold'>
             Personal Individual Training
           </h2>
           <p>
             Begin a journey of lifelong learning and professional development
-            with Tobams Group&apso;s diverse range of training programs for
+            with Tobams Group&apos;s diverse range of training programs for
             individuals. From technical skills mastery to soft skills
             enhancement, our courses cover a wide spectrum of topics to meet the
             evolving needs of today&apos;s professionals.
           </p>
 
           <div>
-            <ListComponent items={trainings} />
+            <ListComponent items={personalIndividualTrainings} />
           </div>
         </div>
       </div>

@@ -1,30 +1,24 @@
-'use client';
-
 import Image from 'next/image';
-import Link from 'next/link';
-import lmsImage from '../images/lms.jpg';
+
+import { LinkButton } from './LinkButton';
+
 import { ArrowRightUp } from './icons/ArrowRightUp';
 
-const courses = [
-  'Business Analysis',
-  'Design Thinking',
-  'Effective Communication',
-  'Entrepreneurship',
-  'Career Development',
-  'Business Model',
-];
+import { courses } from '@/constants';
 
-export function LMS() {
+import lmsImage from '../images/lms.jpg';
+
+export function LearningManagementSystem() {
   return (
-    <section className='bg-primary-muted py-10 px-4'>
-      <div className='max-w-360 w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-y-6'>
-        {/* heading */}
-        <h2 className='text-[20px] md:hidden text-primary sm:text-center'>
+    <section className='bg-primary-muted py-8 px-4 md:px-8 lg:px-16'>
+      <div className='max-w-8xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6 lg:gap-16'>
+        {/* Mobile heading */}
+        <h2 className='text-[20px] font-semibold sm:text-3xl md:text-4xl lg:hidden text-primary sm:text-center'>
           Learning Management System
         </h2>
-        {/* image */}
+
         <div className='flex items-center justify-center'>
-          <div className='relative h-82 w-82 md:w-139 md:h-142'>
+          <div className='relative h-82 w-82 lg:w-139 lg:h-142'>
             <Image
               src={lmsImage}
               alt='Learning Management System'
@@ -34,14 +28,12 @@ export function LMS() {
           </div>
         </div>
 
-        {/* content */}
         <div className='space-y-6'>
-          <h2 className='hidden md:block text-3xl md:text-4xl font-bold text-primary'>
+          <h2 className='hidden lg:block lg:text-[40px] font-semibold text-primary'>
             Learning Management System
           </h2>
 
           <div className='bg-primary-muted p-4 rounded-sm space-y-6'>
-            {/* Description */}
             <p>
               TG Academy is a hub of knowledge and skill-building resources
               designed to empower tech talents on their learning journey. From
@@ -65,24 +57,16 @@ export function LMS() {
               </ul>
             </div>
 
-            {/* CTA Button */}
-            <Link
-              href='#'
-              className='bg-primary text-background py-3 px-6 rounded-sm text-sm flex lg:hidden gap-x-2 w-fit items-center justify-center'
-            >
+            <LinkButton className='py-3 px-6 flex lg:hidden gap-x-2 items-center justify-center'>
               Learn More
               <ArrowRightUp />
-            </Link>
+            </LinkButton>
           </div>
 
-          {/* CTA Button */}
-          <Link
-            href='#'
-            className='bg-primary text-background py-3 px-6 rounded-sm text-sm hidden lg:flex gap-x-2 w-fit items-center justify-center'
-          >
+          <LinkButton className='py-3 px-6 hidden gap-x-2 lg:flex lg:items-center lg:justify-center'>
             Learn More
             <ArrowRightUp />
-          </Link>
+          </LinkButton>
         </div>
       </div>
     </section>

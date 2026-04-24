@@ -1,26 +1,19 @@
 import Image from 'next/image';
 import managementDevelopmentProgram from '../images/managementDevelopmentProgram.png';
 import { ListIcon } from './icons/ListIcon';
-
-const developments = [
-  'Enhanced Leadership Skills',
-  'Improved Employee Engagement',
-  'Stronger Organisational Culture',
-  'Sustainable Growth',
-];
+import { managementDevelopmentsPrograms } from '@/constants';
 
 export function ManagementDevelopmentProgram() {
   return (
-    <section className='px-4 py-10 bg-primary-muted text-background'>
-      <div className='max-w-360 w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-y-6 py-4  px-4 md:px-20 rounded-md bg-primary'>
+    <section className='px-4 py-10 bg-primary-muted text-background md:px-8 lg:px-16'>
+      <div className='max-w-8xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-6 lg:gap-12 p-5 lg:p-10 rounded-2xl bg-[#2C0922]'>
         {/* Heading- mobile */}
-        <h2 className='text-[20px] md:hidden sm:text-center font-semibold'>
+        <h2 className='text-[20px] font-semibold sm:text-3xl md:text-4xl lg:hidden sm:text-center'>
           Management Development Program
         </h2>
 
-        {/* image */}
         <div className='flex items-center justify-center md:justify-start'>
-          <div className='relative h-82 w-82 md:w-148 md:h-160'>
+          <div className='relative h-82 w-full lg:w-148 lg:h-160'>
             <Image
               src={managementDevelopmentProgram}
               alt='Management Development Program'
@@ -30,8 +23,7 @@ export function ManagementDevelopmentProgram() {
           </div>
         </div>
 
-        {/* Content */}
-        <div className='p-8 rounded-sm space-y-8'>
+        <div className='lg:p-8 rounded-sm space-y-8'>
           <h2 className='text-[40px] hidden lg:block font-semibold'>
             Management Development Program
           </h2>
@@ -51,7 +43,7 @@ export function ManagementDevelopmentProgram() {
 
           <div>
             <ul className='flex flex-col gap-y-6 px-2'>
-              {developments.map((development) => (
+              {managementDevelopmentsPrograms.map((development) => (
                 <li
                   key={development}
                   className='flex items-start gap-2 bg-[#8F6182] py-2 px-4 rounded-md'

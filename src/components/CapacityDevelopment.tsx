@@ -1,28 +1,19 @@
+import { capacityDevelopments } from '@/constants';
 import Image from 'next/image';
-import { ListComponent } from './ListComponent';
 import capacityDevelopment from '../images/capacityDevelopment.jpg';
-
-const developments = [
-  'Tailored Training Programs',
-  'Expert-Led Workshops',
-  'Personalized Mentorship',
-  'Technical Skills Enhancement',
-  'Collaborative Learning Environment',
-  'Ongoing Support and Resources',
-];
+import { ListComponent } from './ListComponent';
 
 export function CapacityDevelopment() {
   return (
-    <section className='px-4'>
-      <div className='max-w-360 w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-y-6'>
+    <section className='px-4 md:px-8 lg:px-16'>
+      <div className='max-w-8xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-6 md:gap-16'>
         {/* Heading- mobile */}
-        <h2 className='text-[20px] md:hidden sm:text-center font-semibold'>
+        <h2 className='text-[20px] sm:text-3xl md:text-4xl lg:hidden font-semibold'>
           Capacity Development
         </h2>
 
-        {/* image */}
-        <div className='lg:order-2 flex items-center justify-center md:justify-end'>
-          <div className='relative h-82 w-82 md:w-151 md:h-87'>
+        <div className='lg:order-2 flex items-center justify-center lg:justify-end'>
+          <div className='relative h-82 w-full lg:w-151 lg:h-87'>
             <Image
               src={capacityDevelopment}
               alt='Capacity Development'
@@ -32,10 +23,8 @@ export function CapacityDevelopment() {
           </div>
         </div>
 
-        {/* Content */}
-
-        <div className='p-4 rounded-sm space-y-5 lg:order-1'>
-          <h2 className='text-[20px] hidden lg:block font-semibold'>
+        <div className='rounded-sm space-y-5 lg:order-1'>
+          <h2 className='text-[40px] hidden lg:block font-semibold'>
             Capacity Development
           </h2>
           <p>
@@ -47,7 +36,7 @@ export function CapacityDevelopment() {
           </p>
 
           <div>
-            <ListComponent items={developments} />
+            <ListComponent items={capacityDevelopments} />
           </div>
         </div>
       </div>

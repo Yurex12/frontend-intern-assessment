@@ -1,4 +1,6 @@
-export function ArrowRightUp() {
+import { IconProps } from '@/types';
+
+export function ArrowRightUp({ className }: IconProps) {
   return (
     <svg
       width='12'
@@ -6,6 +8,7 @@ export function ArrowRightUp() {
       viewBox='0 0 12 12'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      className={className}
     >
       <path
         d='M11 1L1 11M11 1H2M11 1V10'

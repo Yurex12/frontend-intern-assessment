@@ -1,25 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import ceoImage from '../images/ceoImage.jpg';
 import { ArrowRightUp } from './icons/ArrowRightUp';
-
-const topicsTabs = [
-  'Strategic Career Guidance',
-  'Leadership Development',
-  'CV Development',
-  'Sustainability Leadership',
-  'Communication Skills',
-  'Business Model',
-];
+import { LinkButton } from './LinkButton';
+import { topicsTabs } from '@/constants';
+import { ListIcon } from './icons/ListIcon';
 
 export function LearningWithOurCeo() {
   return (
-    <section className='px-4 py-10 md:py-20 bg-primary-muted'>
-      <div className='max-w-360 w-full mx-auto'>
+    <section className='px-4 md:px-8 lg:px-16'>
+      <div className='max-w-8xl w-full mx-auto p-5 lg:p-10 bg-[#EF435333] rounded-xl'>
         <div>
-          {/* Subheading */}
+          {/* Mobile Heading */}
           <p className='text-[#1671D9] mb-2 italic font-medium'>
             Learning With Our CEO:
           </p>
@@ -30,7 +23,7 @@ export function LearningWithOurCeo() {
           </h2>
 
           {/* Description */}
-          <p>
+          <p className='mb-6'>
             Transformation Hub with Jite Newton is a flagship webinar series
             curated by the CEO, Dr. Jite Newton. Designed to elevate career
             trajectories and leadership capabilities, this exclusive event
@@ -42,9 +35,9 @@ export function LearningWithOurCeo() {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-y-6 rounded-md py-8'>
-          <div>
-            <div className='relative w-80 h-96 md:w-[560px] md:h-[340px]'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-6 rounded-md'>
+          <div className='flex items-center justify-center md:justify-start'>
+            <div className='relative w-full h-96 lg:w-140 lg:h-85'>
               <Image
                 src={ceoImage}
                 alt='CEO Image'
@@ -55,26 +48,13 @@ export function LearningWithOurCeo() {
           </div>
 
           <div className='space-y-4'>
-            {/* Cards Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
               {topicsTabs.map((topic) => (
                 <div
                   key={topic}
-                  className='bg-white rounded-lg p-4 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow'
+                  className='bg-background rounded-lg p-4 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow'
                 >
-                  <svg
-                    width='24'
-                    height='24'
-                    viewBox='0 0 24 24'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='shrink-0'
-                  >
-                    <path
-                      d='M13 2L3 14H12L11 22L21 10H12L13 2Z'
-                      fill='#480F39'
-                    />
-                  </svg>
+                  <ListIcon />
                   <span className='text-sm font-medium text-foreground'>
                     {topic}
                   </span>
@@ -82,24 +62,13 @@ export function LearningWithOurCeo() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <Link
-              href='#'
-              className='inline-flex items-center gap-2 bg-primary text-background py-3 px-6 rounded-md font-medium transition-all duration-200 hover:opacity-90 w-fit'
-            >
+            <LinkButton className='flex justify-center items-center gap-2 py-3 px-6'>
               Learn More
               <ArrowRightUp />
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-<div className='grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-12 items-center'>
-  {/* Left: Image */}
-  <div className='flex items-center justify-center lg:order-1'></div>
-
-  {/* Right: Content */}
-</div>;
