@@ -1,10 +1,10 @@
 # TOBAMS GROUP - Assessment Submission
 
-## 🚀 Project Overview
+## Project Overview
 
 A replica of the Tobams Group Figma design. This project focuses on turning a professional design into a fast, responsive, and clean Next.js application.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS v4
@@ -12,7 +12,7 @@ A replica of the Tobams Group Figma design. This project focuses on turning a pr
 - **Interactivity:** Swiper.js for responsive carousels
 - **Utilities:** `clsx` & `tailwind-merge` (The `cn` utility pattern)
 
-## 🏗️ Technical Decisions & Architecture
+## Technical Decisions & Architecture
 
 ### 1. The `cn` Utility Pattern
 
@@ -37,13 +37,13 @@ Leveraging the new `@theme` block in Tailwind v4:
 
 - **Swiper.js:** Chosen for the testimonial sliders to provide a smooth, touch-friendly experience on mobile devices.
 
-## 📁 Project Structure
+## Project Structure
 
 - `/src/components`: UI components (Header, Hero, Icons).
 - `/src/lib`: Core utility functions.
 - `globals.css`: Theme configuration.
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repo:** `git clone <repo-url>`
 2. **Install dependencies:** `npm install`
