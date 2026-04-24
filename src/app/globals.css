@@ -8,24 +8,25 @@
   --foreground: #151515;
 
   --primary-muted: #5712441a;
+  --secondary-muted: #f043541a;
 }
 
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-primary-muted: var(--primary-muted);
+  --color-secondary-muted: var(--secondary-muted);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito-sans);
 
   --container-8xl: 90rem; /* 1440px */
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground font-sans font-normal;
+    @apply font-sans leading-normal bg-background text-foreground text-sm md:text-base;
   }
 }

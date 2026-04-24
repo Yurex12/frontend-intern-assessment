@@ -9,12 +9,7 @@ import { XIcon } from '@/components/icons/XIcon';
 import { MailIcon } from '@/components/icons/MailIcon';
 import { PhoneIcon } from '@/components/icons/PhoneIcon';
 
-import {
-  companyLinks,
-  legalLinks,
-  solutionLinks,
-  whatWeDoLinks,
-} from '@/constants';
+import { companyLinks, solutionLinks, whatWeDoLinks } from '@/constants';
 
 export function Footer() {
   return (
@@ -176,16 +171,16 @@ export function Footer() {
               <p className='text-sm text-center'>
                 Copyright © Tobams Group, 2024. All rights reserved.
               </p>
-              <div className='flex items-center flex-row-reverse md:flex-row flex-wrap justify-center gap-6'>
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className='text-sm hover:text-background transition-colors underline lg:no-underline'
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              <div className='flex flex-wrap items-center justify-center gap-6'>
+                <Link href='#' className='lg:order-2 underline lg:no-underline'>
+                  Privacy Policy
+                </Link>
+                <Link href='#' className='lg:order-3 underline lg:no-underline'>
+                  Cookies Policy
+                </Link>
+                <Link href='#' className='lg:order-1 underline lg:no-underline'>
+                  Terms and Conditions
+                </Link>
               </div>
             </div>
           </div>

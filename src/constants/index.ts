@@ -115,6 +115,12 @@ export const testimonials: Testimonial[] = [
     image: johnImg,
     testimonial: `Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.`,
   },
+  {
+    name: 'Adeyemi Taofeek',
+    role: 'Devops Director, FutureTech Solutions',
+    image: johnImg,
+    testimonial: `Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.`,
+  },
 ];
 
 export const whatWeDoLinks = [

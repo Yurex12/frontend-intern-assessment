@@ -1,16 +1,13 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
 import { Header } from '@/components/Header';
+import type { Metadata } from 'next';
+import { Nunito_Sans } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+import './globals.css';
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const nunitoSans = Nunito_Sans({
+  variable: '--font-nunito-sans',
   subsets: ['latin'],
+  weight: ['400', '600', '500', '700', '800'],
 });
 
 export const metadata: Metadata = {
@@ -24,10 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang='en'
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
+    <html lang='en' className={`${nunitoSans.variable} antialiased`}>
       <body className='text-sm md:text-base'>
         <Header />
         <>{children}</>

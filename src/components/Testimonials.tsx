@@ -4,8 +4,8 @@ import { testimonials } from '@/constants';
 
 import Image from 'next/image';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 
@@ -31,7 +31,7 @@ export function Testimonials() {
           breakpoints={{
             0: { slidesPerView: 1.2 },
             640: { slidesPerView: 2.4 },
-            1024: { slidesPerView: 3.5 },
+            1024: { slidesPerView: 3.2 },
           }}
           className='pb-12'
         >
@@ -45,6 +45,7 @@ export function Testimonials() {
                       alt={name}
                       fill
                       className='object-cover'
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     />
                   </div>
                   <div>
@@ -62,14 +63,14 @@ export function Testimonials() {
         <div className='flex justify-end'>
           <div className='flex items-center justify-between gap-4'>
             <button
-              className='testimonial-prev flex h-8 w-10 items-center justify-center rounded-md bg-secondary/20 text-foreground'
+              className='testimonial-prev flex h-8 w-10 items-center justify-center rounded-md bg-secondary-muted text-foreground cursor-pointer'
               aria-label='Previous testimonial'
             >
               <ChevronIcon className='rotate-90 text-secondary' />
             </button>
 
             <button
-              className='testimonial-prev flex h-8 w-10 items-center justify-center rounded-md bg-secondary/20 text-foreground'
+              className='testimonial-next flex h-8 w-10 items-center justify-center rounded-md bg-secondary-muted text-foreground cursor-pointer'
               aria-label='Next testimonial'
             >
               <ChevronIcon className='-rotate-90 text-secondary' />
