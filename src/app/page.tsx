@@ -5,6 +5,7 @@ import { LMS } from '@/components/LMS';
 import { ManagementDevelopmentProgram } from '@/components/ManagementDevelopmentProgram';
 import { PersonalIndividualTraining } from '@/components/PersonalIndividualTraining';
 import { LearningWithOurCeo } from '@/components/LearningWithOurCeo';
+import { BookConsultant } from '@/components/BookConsultant';
 import { TrainingTheConsultant } from '@/components/TrainingTheConsultant';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <ManagementDevelopmentProgram />
       <LearningWithOurCeo />
       <TrainingTheConsultant />
+      <BookConsultant />
     </main>
   );
 }
