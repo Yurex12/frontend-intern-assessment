@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export interface NavLink {
   label: string;
   href: string;
@@ -11,4 +13,11 @@ export interface MobileNavbarProps {
 
 export interface IconProps {
   className?: string;
+}
+
+export interface Testimonial {
+  name: string;
+  role: string;
+  image: StaticImageData;
+  testimonial: string;
 }

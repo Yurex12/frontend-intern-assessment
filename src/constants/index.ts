@@ -1,4 +1,8 @@
-import { NavLink } from '@/types';
+import { NavLink, Testimonial } from '@/types';
+
+import aishaImg from '@/images/aisha.png';
+import johnImg from '@/images/john.png';
+import chinonsoImg from '@/images/chinonso.png';
 
 export const navLinks: NavLink[] = [
   { label: 'About', href: '#', hasChevron: true },
@@ -82,6 +86,34 @@ export const trainingSections = [
     title: 'Global Recognition',
     description:
       'You will attain a globally recognized certification, opening doors to new career opportunities and industry recognition.',
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    name: 'Aisha Yusuf',
+    role: 'Founder, CraftHub NG',
+    image: aishaImg,
+    testimonial:
+      'Working with Tobams Group on our website was a breeze. They understood our vision and transformed it into a beautiful online space. Highly recommend their Website Design service!',
+  },
+  {
+    name: 'John Davies',
+    role: 'Marketing Manager, E-Commerce Emporium',
+    image: johnImg,
+    testimonial: `Tobams Group's Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results. A pleasure to collaborate with!`,
+  },
+  {
+    name: 'Chinonso Nwankwo',
+    role: 'HR Director, FutureTech Solutions',
+    image: chinonsoImg,
+    testimonial: `Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.`,
+  },
+  {
+    name: 'Ekungomi Yusuf',
+    role: 'IT Director, FutureTech Solutions',
+    image: johnImg,
+    testimonial: `Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.`,
   },
 ];
 

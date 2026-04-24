@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className='absolute inset-0 bg-foreground/70' />
 
-      <div className='relative z-10 max-w-5xl mx-auto px-8 text-center'>
+      <div className='relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center'>
         <div className='inline-block mb-6'>
           <span className='px-10 py-3 bg-background/5 backdrop-blur-xl rounded-full text-xs '>
             WHAT WE DO
@@ -25,7 +25,8 @@ export function Hero() {
         </div>
 
         <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-bold mb-4'>
-          Training and Development
+          <span className='hidden lg:inline'>Training</span>
+          <span className='inline lg:hidden'>Learning</span> and Development
         </h1>
 
         <p className='mb-8'>
