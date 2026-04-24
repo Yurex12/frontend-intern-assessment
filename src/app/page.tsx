@@ -5,6 +5,7 @@ import { LMS } from '@/components/LMS';
 import { ManagementDevelopmentProgram } from '@/components/ManagementDevelopmentProgram';
 import { PersonalIndividualTraining } from '@/components/PersonalIndividualTraining';
 import { LearningWithOurCeo } from '@/components/LearningWithOurCeo';
+import { TrainingTheConsultant } from '@/components/TrainingTheConsultant';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <CapacityDevelopment />
       <ManagementDevelopmentProgram />
       <LearningWithOurCeo />
+      <TrainingTheConsultant />
     </main>
   );
 }
