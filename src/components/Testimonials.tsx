@@ -1,5 +1,3 @@
-'use client';
-
 import { testimonials } from '@/constants';
 
 import Image from 'next/image';

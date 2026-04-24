@@ -1,5 +1,3 @@
-'use client';
-
 import { LinkButton } from './LinkButton';
 
 export function GetInTouch() {
