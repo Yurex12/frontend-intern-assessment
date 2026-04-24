@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { ListComponent } from './ListComponent';
 import managementDevelopmentProgram from '../images/managementDevelopmentProgram.png';
 import { ListIcon } from './icons/ListIcon';
 
@@ -13,7 +12,7 @@ const developments = [
 export function ManagementDevelopmentProgram() {
   return (
     <section className='px-4 py-10 bg-primary-muted text-background'>
-      <div className='max-w-360 w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-y-6 py-4 px-20 rounded-md bg-primary'>
+      <div className='max-w-360 w-full mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-y-6 py-4  px-4 md:px-20 rounded-md bg-primary'>
         {/* Heading- mobile */}
         <h2 className='text-[20px] md:hidden sm:text-center font-semibold'>
           Management Development Program
